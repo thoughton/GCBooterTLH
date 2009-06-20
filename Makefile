@@ -11,12 +11,13 @@ include $(DEVKITPPC)/wii_rules
 
 #---------------------------------------------------------------------------------
 # TARGET is the name of the output
+# TARGETDIR is the directory where the TARGET output is created
 # BUILD is the directory where object files & intermediate files will be placed
 # SOURCES is a list of directories containing source code
 # INCLUDES is a list of directories containing extra header files
 #---------------------------------------------------------------------------------
-#TARGET		:=	$(notdir $(CURDIR))
 TARGET		:=	boot
+TARGETDIR	:=	$(notdir $(CURDIR))
 BUILD			:=	build
 SOURCES		:=	source
 DATA			:=	data  
@@ -49,7 +50,7 @@ LIBDIRS	:=
 ifneq ($(BUILD),$(notdir $(CURDIR)))
 #---------------------------------------------------------------------------------
 
-export OUTPUT	:=	$(CURDIR)/$(TARGET)
+export OUTPUT	:=	$(CURDIR)/$(TARGETDIR)/$(TARGET)
 
 export VPATH	:=	$(foreach dir,$(SOURCES),$(CURDIR)/$(dir)) \
 					$(foreach dir,$(DATA),$(CURDIR)/$(dir))
@@ -92,7 +93,7 @@ export INCLUDE	:=	$(foreach dir,$(INCLUDES), -iquote $(CURDIR)/$(dir)) \
 export LIBPATHS	:=	$(foreach dir,$(LIBDIRS),-L$(dir)/lib) \
 					-L$(LIBOGC_LIB)
 
-export OUTPUT	:=	$(CURDIR)/$(TARGET)
+export OUTPUT	:=	$(CURDIR)/$(TARGETDIR)/$(TARGET)
 .PHONY: $(BUILD) clean
 
 #---------------------------------------------------------------------------------
@@ -107,11 +108,11 @@ clean:
 
 #---------------------------------------------------------------------------------
 run:
-	psoload $(TARGET).dol
+	psoload $(TARGETDIR)/$(TARGET).dol
 
 #---------------------------------------------------------------------------------
 reload:
-	psoload -r $(TARGET).dol
+	psoload -r $(TARGETDIR)/$(TARGET).dol
 
 
 #---------------------------------------------------------------------------------

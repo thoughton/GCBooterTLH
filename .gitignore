@@ -1,0 +1,8 @@
+.*
+!.gitignore
+*.elf
+*.dol
+*.[do]
+*.map
+*.png
+
