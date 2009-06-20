@@ -77,6 +77,7 @@ static void Initialise (void)
  
   PAD_Init ();            /*** Initialise pads for input ***/
  
+#if 0
     /*** Try to match the current video display mode
          using the higher resolution interlaced.
     
@@ -101,6 +102,11 @@ static void Initialise (void)
       vmode = &TVNtsc480IntDf;
       break;
     }
+#endif
+#if 1  // [tlh] fix for PAL 60 Wiis so they don't have red gfx
+    vmode = VIDEO_GetPreferredMode(NULL);
+#endif
+
     /*** Let libogc configure the mode ***/
   VIDEO_Configure (vmode);
  

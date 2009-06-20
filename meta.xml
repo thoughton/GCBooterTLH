@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <app version="1">
-	<name>GCBooter</name>
-	<version>1.0</version>
-	<coder>emu_kidid</coder>
-	<short_description>Boots GC Games</short_description>
-	<long_description>This is just a simple example to allow users to boot Gamecube games (original discs only kthx) on their Nintendo Wii via the homebrew channel. It is also region free.</long_description>
+	<name>GCBooterTLH</name>
+	<version>0.9</version>
+	<coder>-</coder>
+	<short_description>Boot GC games w/ PAL60</short_description>
+	<long_description>
+Just a version of emu_kidid's excellent GCBooter program that works correctly on PAL Wiis in 60hz mode.
+
+As emu_kidid's original description says:
+"Allows users to boot Gamecube games (original discs only kthx) on their Nintendo Wii via the homebrew channel. It is also region free."
+	</long_description>
 </app>
