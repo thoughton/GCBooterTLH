@@ -159,24 +159,25 @@ int main ()
 	
 	Initialise();
 	
-	printf("\n\n\n\n\nGCBooter v1.0\n\n\n");
+	printf("\n\n\n\n\nGCBooterTLH v0.9\n");
+	printf("(A very-slightly modified version of: GCBooter v1.0)\n\n\n");
 	
 	printf("Please Insert a Nintendo Gamecube Disk\n\n\n");
 	wait_press_A();
 	
-	printf("Opening /dev/di/ ...\n");
+	printf("\nOpening /dev/di/ ...\n\n");
 	WiiDVD_Init();
 	wait_press_A();
 	
-	printf("Resetting DI interface...\n");
+	printf("\nResetting DI interface...\n\n");
 	WiiDVD_Reset();
 	wait_press_A();
 	
-	printf("Reading Disc ID...\n");
+	printf("\nReading Disc ID...\n\n");
 	WiiDVD_ReadID((void*)0x80000000);
 	wait_press_A();
 	
-	printf("Launching Game...\n");
+	printf("\nLaunching Game...\n\n");
 	*(volatile unsigned int *)0xCC003024 |= 7;
 	
 	int retval = ES_GetTicketViews(BC, &view, 1);
