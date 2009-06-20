@@ -144,7 +144,7 @@ static void Initialise (void)
 
 void wait_press_A()
 {
-	printf("Press A to continue..\n");
+	printf("Press [A] on GC pad to continue...\n");
 	while((PAD_ButtonsHeld(0) & PAD_BUTTON_A));
 	while(!(PAD_ButtonsHeld(0) & PAD_BUTTON_A));
 }
@@ -164,19 +164,19 @@ int main ()
 	printf("Please Insert a Nintendo Gamecube Disk\n\n\n");
 	wait_press_A();
 	
-	printf("Opening /dev/di/ ..\n");
+	printf("Opening /dev/di/ ...\n");
 	WiiDVD_Init();
 	wait_press_A();
 	
-	printf("Resetting DI interface ..\n");
+	printf("Resetting DI interface...\n");
 	WiiDVD_Reset();
 	wait_press_A();
 	
-	printf("Reading Disc ID ..\n");
+	printf("Reading Disc ID...\n");
 	WiiDVD_ReadID((void*)0x80000000);
 	wait_press_A();
 	
-	printf("Launching Game ..\n");
+	printf("Launching Game...\n");
 	*(volatile unsigned int *)0xCC003024 |= 7;
 	
 	int retval = ES_GetTicketViews(BC, &view, 1);
