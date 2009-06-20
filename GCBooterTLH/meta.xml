@@ -2,6 +2,7 @@
 <app version="1">
 	<name>GCBooterTLH</name>
 	<version>0.9</version>
+	<coder>-</coder>
 	<short_description>Boot GC games w/ PAL60</short_description>
 	<long_description>
 Just a version of emu_kidid's excellent GCBooter program that works correctly on PAL Wiis in 60hz mode.
