@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<app version="1">
+	<name>GCBooter</name>
+	<version>1.0</version>
+	<coder>emu_kidid</coder>
+	<short_description>Boots GC Games</short_description>
+	<long_description>This is just a simple example to allow users to boot Gamecube games (original discs only kthx) on their Nintendo Wii via the homebrew channel. It is also region free.</long_description>
+</app>
