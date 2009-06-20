@@ -77,35 +77,8 @@ static void Initialise (void)
  
   PAD_Init ();            /*** Initialise pads for input ***/
  
-#if 0
-    /*** Try to match the current video display mode
-         using the higher resolution interlaced.
-    
-         So NTSC/MPAL gives a display area of 640x480
-         PAL display area is 640x528
-    ***/
-  switch (VIDEO_GetCurrentTvMode ())
-    {
-    case VI_NTSC:
-      vmode = &TVNtsc480IntDf;
-      break;
- 
-    case VI_PAL:
-      vmode = &TVPal528IntDf;
-      break;
- 
-    case VI_MPAL:
-      vmode = &TVMpal480IntDf;
-      break;
- 
-    default:
-      vmode = &TVNtsc480IntDf;
-      break;
-    }
-#endif
-#if 1  // [tlh] fix for PAL 60 Wiis so they don't have red gfx
-    vmode = VIDEO_GetPreferredMode(NULL);
-#endif
+  // [tlh] fix for PAL 60 Wiis so they don't have red gfx
+  vmode = VIDEO_GetPreferredMode(NULL);
 
     /*** Let libogc configure the mode ***/
   VIDEO_Configure (vmode);

@@ -1,0 +1,132 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXFileReference section */
+		16E82D970F69D030004FA0DC /* source.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = source.c; sourceTree = "<group>"; };
+		52DE2CDA0D85E9E100F4BC3F /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		52E8117C0D85ECE200227376 /* GCBooterTLH.dol */ = {isa = PBXFileReference; lastKnownFileType = file; path = GCBooterTLH.dol; sourceTree = "<group>"; };
+		52E8117D0D85ECE200227376 /* GCBooterTLH.elf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GCBooterTLH.elf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* GCBooterTLH */ = {
+			isa = PBXGroup;
+			children = (
+				52DE2CDA0D85E9E100F4BC3F /* Makefile */,
+				08FB7795FE84155DC02AAC07 /* source */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = GCBooterTLH;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				16E82D970F69D030004FA0DC /* source.c */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52E8117C0D85ECE200227376 /* GCBooterTLH.dol */,
+				52E8117D0D85ECE200227376 /* GCBooterTLH.elf */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		52DE2CDF0D85EA4C00F4BC3F /* Makefile */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 52DE2CE50D85EA9300F4BC3F /* Build configuration list for PBXLegacyTarget "Makefile" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			dependencies = (
+			);
+			name = Makefile;
+			passBuildSettingsInEnvironment = 1;
+			productName = Makefile;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "GCBooterTLH" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* GCBooterTLH */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52DE2CDF0D85EA4C00F4BC3F /* Makefile */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB928A08733DD80010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVKITPPC = /opt/devkitpro/devkitppc;
+				DEVKITPRO = /opt/devkitpro;
+			};
+			name = Debug;
+		};
+		1DEB928B08733DD80010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVKITPPC = /opt/devkitpro/devkitppc;
+				DEVKITPRO = /opt/devkitpro;
+			};
+			name = Release;
+		};
+		52DE2CE00D85EA4C00F4BC3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Makefile;
+			};
+			name = Debug;
+		};
+		52DE2CE10D85EA4C00F4BC3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Makefile;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "GCBooterTLH" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB928A08733DD80010E9CD /* Debug */,
+				1DEB928B08733DD80010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52DE2CE50D85EA9300F4BC3F /* Build configuration list for PBXLegacyTarget "Makefile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52DE2CE00D85EA4C00F4BC3F /* Debug */,
+				52DE2CE10D85EA4C00F4BC3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

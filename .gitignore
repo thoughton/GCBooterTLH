@@ -5,4 +5,7 @@
 *.[do]
 *.map
 *.png
+*.build
+*.xcodeproj/*.mode1v3
+*.xcodeproj/*.pbxuser
 
